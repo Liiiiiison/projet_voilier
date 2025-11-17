@@ -403,6 +403,11 @@
               <FilePath>..\Drivers\src\MyADC.c</FilePath>
             </File>
             <File>
+              <FileName>MyGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyGirouette.c</FilePath>
+            </File>
+            <File>
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\MyTimer.c</FilePath>
@@ -413,39 +418,9 @@
               <FilePath>..\Drivers\src\MyUART.c</FilePath>
             </File>
             <File>
-              <FileName>MyUART.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyUART.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyTimer.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyADC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyADC.h</FilePath>
-            </File>
-            <File>
-              <FileName>GPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\GPIO.h</FilePath>
-            </File>
-            <File>
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\GPIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyGirouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\src\MyGirouette.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyGirouette.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyGirouette.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -461,7 +436,7 @@
       <TargetName>Simulation</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
+      <pCCUsed>6230000::V6.23::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -791,7 +766,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Drivers;.\Services</IncludePath>
+              <IncludePath>..\Drivers\src;..\Drivers\includes</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -854,6 +829,11 @@
               <FilePath>..\Drivers\src\MyADC.c</FilePath>
             </File>
             <File>
+              <FileName>MyGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyGirouette.c</FilePath>
+            </File>
+            <File>
               <FileName>MyTimer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\MyTimer.c</FilePath>
@@ -864,39 +844,9 @@
               <FilePath>..\Drivers\src\MyUART.c</FilePath>
             </File>
             <File>
-              <FileName>MyUART.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyUART.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyTimer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyTimer.h</FilePath>
-            </File>
-            <File>
-              <FileName>MyADC.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyADC.h</FilePath>
-            </File>
-            <File>
-              <FileName>GPIO.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\GPIO.h</FilePath>
-            </File>
-            <File>
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\GPIO.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyGirouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\src\MyGirouette.c</FilePath>
-            </File>
-            <File>
-              <FileName>MyGirouette.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\Drivers\includes\MyGirouette.h</FilePath>
             </File>
           </Files>
         </Group>
