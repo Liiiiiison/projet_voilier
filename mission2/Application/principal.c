@@ -11,7 +11,7 @@ int main ( void )
 {
 
 	Init_UART(USART2, 9600);
-	Active_IT_Read_UART(USART2, setValue);
+	Active_IT_Read_UART(USART2, 15, setValue);
 	
 	// AREFAIRRE
 	while (1)
