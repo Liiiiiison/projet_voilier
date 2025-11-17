@@ -14,14 +14,18 @@ void Init_UART(USART_TypeDef * UART, int Bdrate){
 	if (UART == USART1) {
 		RCC->APB2ENR |= RCC_APB2ENR_USART1EN; 
 		UART->BRR = (72e6)/ Bdrate;
+		configureOutputGPIO(GPIOA, ALTERNATIVE_PUSH_PULL, 9, _2_MHZ);
 	}
 	else if (UART == USART2) {
 		RCC->APB1ENR |= RCC_APB1ENR_USART2EN;
-		UART->BRR = (72*10e6)/ Bdrate;
+		UART->BRR = (72e6)/ Bdrate;
+		configureOutputGPIO(GPIOA, ALTERNATIVE_PUSH_PULL, 2, _2_MHZ);
+
 	}
 	else if (UART == USART3) {
 		RCC->APB1ENR |= RCC_APB1ENR_USART3EN;
-		UART->BRR = (36*10e6)/ Bdrate;
+		UART->BRR = (36e6)/ Bdrate;
+		configureOutputGPIO(GPIOB, ALTERNATIVE_PUSH_PULL, 10, _2_MHZ);
 	}
 	
 	UART->CR1 &= ~USART_CR1_M;

@@ -476,6 +476,21 @@
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\GPIO.c</FilePath>
             </File>
+            <File>
+              <FileName>MyADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyGirouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyUART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyUART.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -886,6 +901,21 @@
               <FileName>GPIO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Drivers\src\GPIO.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyGirouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyGirouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>MyUART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\src\MyUART.c</FilePath>
             </File>
           </Files>
         </Group>
