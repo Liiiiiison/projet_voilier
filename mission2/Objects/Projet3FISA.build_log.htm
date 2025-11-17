@@ -1,0 +1,135 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.42.0.0
+Copyright (C) 2025 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: user user, INSA Toulouse, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.42.0.0
+Toolchain Path:  C:\Keil\542a\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.23
+Assembler:       Armasm.exe V6.23
+Linker/Locator:  ArmLink.exe V6.23
+Library Manager: ArmAr.exe V6.23
+Hex Converter:   FromElf.exe V6.23
+CPU DLL:         SARMCM3.DLL V5.42.0.0
+Dialog DLL:      DARMSTM.DLL V1.69.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TARMSTM.DLL V1.67.1.0
+ 
+<h2>Project:</h2>
+U:\Windows\Bureau\projet_voilier\mission2\ProjetVide.uvprojx
+Project File Date:  11/17/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.23', folder: 'C:\Keil\542a\ARM\ARMCLANG\Bin'
+Rebuild target 'Reel'
+assembling startup_stm32f10x_md.s...
+compiling principal.c...
+compiling system_stm32f10x.c...
+compiling GPIO.c...
+../Drivers/src/MyTimer.c(1): error: unknown type name 'include'
+    1 | include "stm32f10x.h"
+      | ^
+../Drivers/src/MyTimer.c(1): error: expected identifier or '('
+    1 | include "stm32f10x.h"
+      |         ^
+../Drivers/src/MyTimer.c(2): warning: In file included from...
+../Drivers/includes\MyTimer.h(3): warning: In file included from...
+C:/ProgramData/Keil/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(480): error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+  480 | } IRQn_Type;
+      |   ^
+      |   int
+../Drivers/src/MyTimer.c(2): warning: In file included from...
+../Drivers/includes\MyTimer.h(3): warning: In file included from...
+C:/ProgramData/Keil/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(486): warning: In file included from...
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1612): error: unknown type name 'IRQn_Type'
+ 1612 | __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
+      |                                       ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1631): error: unknown type name 'IRQn_Type'
+ 1631 | __STATIC_INLINE uint32_t __NVIC_GetEnableIRQ(IRQn_Type IRQn)
+      |                                              ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1650): error: unknown type name 'IRQn_Type'
+ 1650 | __STATIC_INLINE void __NVIC_DisableIRQ(IRQn_Type IRQn)
+      |                                        ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1669): error: unknown type name 'IRQn_Type'
+ 1669 | __STATIC_INLINE uint32_t __NVIC_GetPendingIRQ(IRQn_Type IRQn)
+      |                                               ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1688): error: unknown type name 'IRQn_Type'
+ 1688 | __STATIC_INLINE void __NVIC_SetPendingIRQ(IRQn_Type IRQn)
+      |                                           ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1703): error: unknown type name 'IRQn_Type'
+ 1703 | __STATIC_INLINE void __NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+      |                                             ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1720): error: unknown type name 'IRQn_Type'
+ 1720 | __STATIC_INLINE uint32_t __NVIC_GetActive(IRQn_Type IRQn)
+      |                                           ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1742): error: unknown type name 'IRQn_Type'
+ 1742 | __STATIC_INLINE void __NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+      |                                         ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1764): error: unknown type name 'IRQn_Type'
+ 1764 | __STATIC_INLINE uint32_t __NVIC_GetPriority(IRQn_Type IRQn)
+      |                                             ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1839): error: unknown type name 'IRQn_Type'
+ 1839 | __STATIC_INLINE void __NVIC_SetVector(IRQn_Type IRQn, uint32_t vector)
+      |                                       ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1855): error: unknown type name 'IRQn_Type'
+ 1855 | __STATIC_INLINE uint32_t __NVIC_GetVector(IRQn_Type IRQn)
+      |                                           ^
+C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include\core_cm3.h(1946): error: use of undeclared identifier 'SysTick_IRQn'
+ 1946 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |                     ^
+../Drivers/src/MyTimer.c(36): error: use of undeclared identifier 'TIM1_UP_IRQn'
+   36 |                         NVIC_EnableIRQ(TIM1_UP_IRQn);
+      |                                        ^
+../Drivers/src/MyTimer.c(37): error: use of undeclared identifier 'TIM1_UP_IRQn'
+   37 |                         NVIC_SetPriority(TIM1_UP_IRQn,Prio);
+      |                                          ^
+../Drivers/src/MyTimer.c(43): error: use of undeclared identifier 'TIM2_IRQn'
+   43 |                         NVIC_EnableIRQ(TIM2_IRQn);
+      |                                        ^
+../Drivers/src/MyTimer.c(44): error: use of undeclared identifier 'TIM2_IRQn'
+   44 |                         NVIC_SetPriority(TIM2_IRQn,Prio);
+      |                                          ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+compiling MyTimer.c...
+".\Objects\Projet3FISA.axf" - 19 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.2.0.pack
+                ARM::CMSIS@6.2.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.1
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil::STM32F1xx_DFP@2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103RB
+  ./RTE/_Reel
+  C:/ProgramData/Keil/Packs/ARM/CMSIS/6.2.0/CMSIS/Core/Include
+  C:/ProgramData/Keil/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.1
+
+   * Component: Keil::Device:Startup@1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+      Include file:  RTE_Driver/Config/RTE_Device.h
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
