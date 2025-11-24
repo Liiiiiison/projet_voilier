@@ -2,8 +2,8 @@
 #define MY_TIMER
 #include "stm32f10x.h"
 
-#define MyTimer_Base_Start (Timer) (Timer->CR1 |= TIM_CR1_CEN)
-#define MyTimer_Base_Stop (Timer) (Timer->CR1 &= ~TIM_CR1_CEN)
+#define MyTimer_Base_Start(Timer) (Timer->CR1 |= TIM_CR1_CEN)
+#define MyTimer_Base_Stop(Timer) (Timer->CR1 &= ~TIM_CR1_CEN)
 
 /**
 *****************************************************************************************
