@@ -1,7 +1,9 @@
 #include "stm32f10x.h"
+#include "MyUART.h"
 
-int main ( void )
+/*int main ( void )
 {
+	//active la clock des timers
 	RCC->APB2ENR |= (0x01 << 2) | (0x01 << 3) | (0x01 << 4) ;
 	
 	//GPIOA.4 en sortie output push pull 0100
@@ -26,4 +28,22 @@ int main ( void )
 			GPIOA->ODR &=~(1 << 4);
 		}
 	}
+}*/
+
+int value ;
+
+void getValue(void) {
+		value = USART2->DR ;
+		
 }
+
+int main (void) 
+{
+	Init_UART(USART2, 9600);
+	
+
+	while (1) {
+		Active_IT_Read_UART(USART2, 15, getValue);
+	}
+}
+	

@@ -8,7 +8,7 @@ void (* callbackUART2)(void);
 void (* callbackUART3)(void);
 
 void Init_UART(USART_TypeDef * UART, int Bdrate){
-	// Régler le Baudrate. => BRR
+	// Régler le Baudrate. => BRR -> dépend du périphérique utilisé ici 9600 
 	// BdRate = F_Clk/BRR
 	// BRR = F_Clk/ BdRate
 	if (UART == USART1) {
@@ -63,8 +63,6 @@ void Active_IT_Read_UART(USART_TypeDef * UART, char prio, void (*IT_Function) (v
 			callbackUART3 = IT_Function;
 		}
 }
-
-
 
 void USART1_IRQHandler(){
 	if (USART1->SR & USART_SR_RXNE){
