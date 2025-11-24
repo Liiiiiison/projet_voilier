@@ -6,6 +6,10 @@ void (*TIM2_func) (void);
 void (*TIM3_func) (void);
 void (*TIM4_func) (void);
 
+int lire_phase_A = 0;
+int lire_phase_B = 0;
+int lire_I = 0;
+
 void MyTimer_Base_Init ( TIM_TypeDef *Timer , unsigned short ValARR , unsigned short ValPSC ){
 
 	if(Timer == TIM1) {
@@ -28,6 +32,43 @@ void MyTimer_Base_Init ( TIM_TypeDef *Timer , unsigned short ValARR , unsigned s
 	Timer->ARR = (ValARR - 1);
 	
 }
+
+void CNT_Callback_phase_A(void){
+	// On suppose que la phase A est sur le Timer 2 
+	// et que la phase B est sur le Timer 3
+	lire_phase_A = TIM2->CCR1;
+	TIM2->SR &= ~TIM_SR_CC1IF; // Réinitialisation du flag d'interruption
+}
+void CNT_Callback_phase_B(void){
+	// On suppose que la phase A est sur le Timer 2 
+	// et que la phase B est sur le Timer 3
+	lire_phase_B = TIM3->CCR1;
+	TIM3->SR &= ~TIM_SR_CC1IF; // Réinitialisation du flag d'interruption
+}
+
+void Conf_capture_phaseAB(TIM_TypeDef *TimerA,TIM_TypeDef *TimerB){
+	TimerA->CCMR1 &= ~TIM_CCMR1_CC1S; // Sélectionner le canal 1
+	TimerA->CCMR1 |= TIM_CCMR1_CC1S_0; // Sélectionner l'entrée du canal 1
+	TimerB->CCMR1 &= ~TIM_CCMR1_CC1S; // Sélectionner le canal 1
+	TimerB->CCMR1 |= TIM_CCMR1_CC1S_0; // Sélectionner l'entrée du canal 1
+	
+	TimerA->CCER |= TIM_CCER_CC1E; // Active capture canal 1
+	TimerA->CCER |=TIM_CCER_CC1P; // Capture en front montant 
+	TimerB->CCER |= TIM_CCER_CC1E; // Active capture canal 1
+	TimerB->CCER |=TIM_CCER_CC1P; // Capture en front montant
+	
+	TimerA->DIER |= TIM_DIER_CC1IE; // Activer l'interruption de la capture.
+	TimerB->DIER |= TIM_DIER_CC1IE;
+	
+	TimerA->CR1 |= TIM_CR1_CEN; // Activation CNT
+	TimerB->CR1 |= TIM_CR1_CEN;
+	
+	NVIC_EnableIRQ(TIM2_IRQn);
+	TIM2_func = CNT_Callback_phase_A;
+	NVIC_EnableIRQ(TIM3_IRQn);
+	TIM3_func = CNT_Callback_phase_B;
+}
+	
 
 void MyTimer_ActiveIT ( TIM_TypeDef * Timer , char Prio, void (*IT_function) (void)) {
 

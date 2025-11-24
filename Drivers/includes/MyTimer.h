@@ -17,6 +17,10 @@ con f pl u s f i n e s (PWM, codeur i n c . . . )
 
 void MyTimer_Base_Init (TIM_TypeDef *Timer , unsigned short ValARR , unsigned short ValPSC );
 
+void CNT_Callback_phase_A(void);
+void CNT_Callback_phase_A(void);
+void Conf_capture_phaseAB(TIM_TypeDef *TimerA,TIM_TypeDef *TimerB);
+
 /**
 **************************************************************************************************
 * @brief

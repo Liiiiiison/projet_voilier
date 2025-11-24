@@ -1,4 +1,5 @@
 #include "stm32f10x.h"
+#include "MyGirouette.h"
 
 int main ( void )
 {
@@ -16,14 +17,12 @@ int main ( void )
 	// Faire une fonction lire_angle / convertir_angle / 
 	
 	
-	
+	Init_Girouette(TIM4,TIM2,TIM3);
 	// AREFAIRRE
 	while (1)
 	{
-		if(GPIOC->IDR & (1 << 4)){
-			GPIOA->ODR |= (1 << 4);
-		} else {
-			GPIOA->ODR &=~(1 << 4);
-		}
+		int ang = lire_angle();
+		int new_ang = convertir_angle(ang);
+		ajuster_voile(TIM4, new_ang);
 	}
 }
